@@ -3,12 +3,27 @@ const phoneInputElement = document.querySelector('#phone');
 const addContactButton = document.querySelector('#add-btn');
 const table = document.querySelector('#phone-book-table');
 const phoneNumberDetails = [];
+const errorOutputParagraph = document.querySelector('#error-output');
 
 addContactButton.addEventListener('click', addNewContact);
+phoneInputElement.addEventListener('keydown', addNewContactOnPressingEnterKey);
+
+function addNewContactOnPressingEnterKey(e) {
+	if (e.key === 'Enter') {
+		addNewContact();
+	}
+}
 
 function addNewContact() {
 	const name = nameInputElement.value;
 	const phoneNumber = phoneInputElement.value;
+
+	if (name.length < 3 || phoneNumber.length < 3) {
+		errorOutputParagraph.innerHTML =
+			'Numele si numarul de telefon trebuie sa contina minim 3 caractere';
+		errorOutputParagraph.style.color = 'red';
+		return;
+	}
 
 	if (phoneNumberDetails.length === 0) {
 		const thead = createTableHeader();
@@ -37,6 +52,10 @@ function addNewContact() {
 	tableBody.appendChild(tableRow);
 
 	table.appendChild(tableBody);
+
+	nameInputElement.value = '';
+	phoneInputElement.value = '';
+	errorOutputParagraph.innerHTML = '';
 }
 
 function createTableHeader() {
