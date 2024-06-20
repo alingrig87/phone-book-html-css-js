@@ -5,6 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Phone Book</title>
 		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 	</head>
 	<body>
 		<div class="container">
@@ -21,12 +28,83 @@
 					</div>
 				</div>
 				<div class="add">
-					<button id="add-btn">Add contact</button>
+					<button class="btn add-contact-btn">Add contact</button>
 				</div>
 			</div>
 			<p id="error-output"></p>
 			<div class="table">
-				<table border="1" id="phone-book-table"></table>
+				<table border="1" id="phone-book-table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Phone Number</th>
+							<th>Edit</th>
+							<th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Alin Grigorescu</td>
+							<td>0728301021</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Maria Popescu</td>
+							<td>0735123456</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Ion Ionescu</td>
+							<td>0747890123</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Elena Marinescu</td>
+							<td>0756345678</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Vasile Dumitrescu</td>
+							<td>0767456789</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Adriana Georgescu</td>
+							<td>0778567890</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Florin Andrei</td>
+							<td>0789678901</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Gabriela Mihai</td>
+							<td>0790789012</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Lucian Neagu</td>
+							<td>0721890123</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+						<tr>
+							<td>Oana Vasile</td>
+							<td>0732901234</td>
+							<td><i class="fa-solid fa-pen-to-square"></i></td>
+							<td><i class="fa-solid fa-trash"></i></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<script src="app.js"></script>
